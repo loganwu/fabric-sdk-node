@@ -3178,7 +3178,8 @@ const Channel = class {
 		chaincodeActionPayload.setChaincodeProposalPayload(chaincodeProposalPayloadNoTrans.toBuffer());
 
 		const transactionAction = new _transProto.TransactionAction();
-		transactionAction.setHeader(header.getSignatureHeader());
+		//remove txacion creator, chicken rib
+		//transactionAction.setHeader(header.getSignatureHeader());
 		transactionAction.setPayload(chaincodeActionPayload.toBuffer());
 
 		const actions = [];
